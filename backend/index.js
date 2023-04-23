@@ -11,10 +11,7 @@ dotenv.config();
 const { PORT } = require('./Config/keys');
 //app.use(express.json()); //to accept json data
 // Enable CORS with allowed origins and headers
-app.use(cors({
-    origin: 'http://localhost:5000',
-    allowedHeaders: 'Content-Type'
-}));
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
