@@ -24,7 +24,7 @@ if (process.env.NODE_ENV == 'production') {
     // const path = require('path');
     app.get('/', (req, res) => {
         res.status(200).json({
-            message: 'Running Successfully'
+            message: 'Running Success'
         });
     })
     app.get('/hi', (req, res) => {
