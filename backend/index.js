@@ -21,7 +21,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(passport.initialize());
 passportAuth(passport);
-app.use('/api', apiRoutes);
 
 if (process.env.NODE_ENV == 'production') {
     // const path = require('path');
@@ -30,6 +29,7 @@ if (process.env.NODE_ENV == 'production') {
             message: 'Running Successfully'
         });
     })
+    app.use('/api', apiRoutes);
 }
 
 app.listen(PORT, async() => {
