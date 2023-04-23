@@ -27,6 +27,13 @@ if (process.env.NODE_ENV == 'production') {
             message: 'Running Successfully'
         });
     })
+    app.get('/hi', (req, res) => {
+            res.status(200).json({
+                message: 'Running Successfully'
+            });
+        })
+        // app.use('/api', apiRoutes);
+
 }
 
 app.listen(PORT, async() => {
