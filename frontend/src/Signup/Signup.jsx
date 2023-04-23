@@ -17,7 +17,7 @@ function Signup({setSignup}) {
               "Content-type":"application/json",
             },
           };
-        const {data}= await axios.post("http://localhost:5000/api/v1/signUp",{email,password,username},config);
+        const {data}= await axios.post(`${process.env.REACT_APP_APPLICATION_SERVER}/api/v1/signUp`,{email,password,username},config);
         setSignup(false);
     } catch (error) {
         console.log(error);

@@ -41,7 +41,7 @@ function Game() {
             setMessage('Final Score is '+ nscore);
             try {
               console.log(nscore,user.username,user.id);
-              const {data}= await axios.post('http://localhost:5000/api/v1/score',{score:nscore,username:user.username,userId:user.id});
+              const {data}= await axios.post(`${process.env.REACT_APP_APPLICATION_SERVER}/api/v1/score`,{score:nscore,username:user.username,userId:user.id});
               console.log(data);
             } catch (error) {
               console.log(error);

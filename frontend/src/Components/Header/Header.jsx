@@ -5,9 +5,10 @@ import {UserState} from '../../Context/UserProvider'
 import { useNavigate } from 'react-router-dom';
 const Header = () => {
 
-  const {user}=UserState(); 
+  const {user,setisAdmin}=UserState(); 
   const navigate = useNavigate();
   const handleClick = () => {
+    setisAdmin(false);
     if (localStorage.getItem("userInfo")) {
       localStorage.removeItem("userInfo");
     }
@@ -17,6 +18,7 @@ const Header = () => {
     if (localStorage.getItem("stage")) {
       localStorage.removeItem("stage");
     }
+    
     navigate("/");
   }
   return (

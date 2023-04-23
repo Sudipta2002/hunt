@@ -8,7 +8,7 @@ const Dash = () => {
     const [data,setData]=useState([]);
     const getData=  async() =>{
         try {
-            const datas =await axios.get('http://localhost:5000/api/v1/dash');
+            const datas =await axios.get(`${process.env.REACT_APP_APPLICATION_SERVER}/api/v1/dash`);
             console.log(datas.data.data);
             setData(datas.data.data);
             // setData(datas.data.data);

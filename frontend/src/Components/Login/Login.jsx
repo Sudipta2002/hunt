@@ -21,14 +21,15 @@ function Login({setSignup}) {
     console.log("Form submitted with email: " + email + " and password: " + password);
     
     try {
+      console.log(process.env.REACT_APP_APPLICATION_SERVER);
         const config={
             headers:{
               "Content-type":"application/json",
-            },
+            }, 
           };
-        const {data}= await axios.post("http://localhost:5000/api/v1/signIn",{email,password},config);
+        const {data}= await axios.post(`${process.env.REACT_APP_APPLICATION_SERVER}/api/v1/signIn`,{email,password},config);
         localStorage.setItem('userInfo',JSON.stringify(data));
-        if(data.username==="Admin@2023"){
+        if(data.username=="Admin@2023"){
           setisAdmin(true);
         }
         navigate('/game');
