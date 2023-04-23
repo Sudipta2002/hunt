@@ -6,11 +6,11 @@ https://hunt-frontend.vercel.app/
 
 First of all anyone cloning this repo should enter to repective folders
 
-#~ Frontend: 
+# Frontend: 
     cd frontend
     npm install
     npm run start
-#~ Backend: 
+# Backend: 
     cd backend
     npm install
     nodemon index.js
