@@ -1,0 +1,7 @@
+.card {
+    background-color: azure;
+    margin: 10px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}

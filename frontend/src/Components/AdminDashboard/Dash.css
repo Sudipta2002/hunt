@@ -1,0 +1,49 @@
+.container {
+    /* justify-content: ; */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(71, 139, 198);
+    height: 580px;
+    width: 50%;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+
+/* .header {
+    display: flex;
+    font-size: xx-large;
+    height: 45px;
+    background-color: rgb(190, 214, 235);
+    justify-content: center;
+    border-radius: 20px;
+} */
+
+.card-head {
+    background-color: rgb(8, 224, 224);
+    margin: 10px;
+    /* border-radius: 25px; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.CardSection {
+    /* z-index: 100;
+    height: 65%;
+    background-color: rgb(169, 210, 210);
+    margin-top: 25px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: scroll;
+    max-height: 400; */
+    /* width: 285px; */
+    height: 65%;
+    background-color: #39445a;
+    border-radius: 10px;
+    /* box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3); */
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}

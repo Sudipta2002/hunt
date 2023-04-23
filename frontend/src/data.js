@@ -1,0 +1,33 @@
+export const data = [{
+    "id": "001",
+    "name": "Sudipta",
+    "score": 50
+}, {
+    "id": "002",
+    "name": "Rivu",
+    "score": 100
+}, {
+    "id": "003",
+    "name": "Agniva",
+    "score": 150
+}, {
+    "id": "004",
+    "name": "Pratik",
+    "score": 200
+}, {
+    "id": "005",
+    "name": "Pritam",
+    "score": 250
+}, {
+    "id": "006",
+    "name": "Agniva",
+    "score": 150
+}, {
+    "id": "007",
+    "name": "Pratik",
+    "score": 200
+}, {
+    "id": "008",
+    "name": "Pritam",
+    "score": 250
+}]
