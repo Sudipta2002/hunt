@@ -29,7 +29,6 @@ app.use('/api/v1/signIn', (req, res) => {
 
 if (process.env.NODE_ENV == 'production') {
     // const path = require('path');
-
     app.get('/', (req, res) => {
         res.status(200).json({
             message: 'Running Successfully'
