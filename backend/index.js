@@ -28,14 +28,14 @@ app.use(passport.initialize());
 passportAuth(passport);
 app.get('/api/v1/dash', ScoreController.getData);
 
-if (process.env.NODE_ENV == 'production') {
-    // const path = require('path');
-    app.get('/', (req, res) => {
+// if (process.env.NODE_ENV == 'production') {
+// const path = require('path');
+app.get('/', (req, res) => {
         res.status(200).json({
             message: 'Running Successfully'
         });
     })
-}
+    // }
 
 app.listen(PORT, async() => {
 
