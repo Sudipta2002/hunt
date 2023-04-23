@@ -25,9 +25,7 @@ app.use('/api', apiRoutes);
 app.use('/api/v1/signIn', (req, res) => {
     return res.json({ message: "Hitting the signIn service" });
 });
-/**
- *  
- */
+
 app.get('/', (req, res) => {
     res.send("Apprunning Succeessfully");
 });
