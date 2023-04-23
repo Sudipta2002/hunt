@@ -9,6 +9,11 @@ const app = express();
 const cors = require('cors');
 dotenv.config();
 const { PORT } = require('./Config/keys');
+const {
+    UserController,
+    ScoreController
+} = require("./Controller/index");
+
 //app.use(express.json()); //to accept json data
 // Enable CORS with allowed origins and headers
 app.use(cors({
@@ -21,7 +26,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(passport.initialize());
 passportAuth(passport);
-app.use('/api', apiRoutes);
+app.get('/api/v1/dash', ScoreController.getData);
 
 if (process.env.NODE_ENV == 'production') {
     // const path = require('path');
