@@ -20,20 +20,20 @@ app.use(passport.initialize());
 passportAuth(passport);
 app.use('/api', apiRoutes);
 
-if (process.env.NODE_ENV == 'production') {
-    // const path = require('path');
-    app.get('/', (req, res) => {
-        res.status(200).json({
-            message: 'Running Success'
-        });
-    })
+// if (process.env.NODE_ENV == 'production') {
+// const path = require('path');
+app.get('/', (req, res) => {
+    res.status(200).json({
+        message: 'Running Success'
+    });
+})
 
 
-}
+// }
+const port = process.env.PORT || 5000
+app.listen(port, async() => {
 
-app.listen(PORT, async() => {
-
-    console.log("Server listening on port " + PORT);
+    console.log("Server listening on port " + port);
     await connect();
     console.log("Database connected");
 })
