@@ -27,12 +27,13 @@ app.use('/api/v1/signIn', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send("Apprunning Succeessfully");
+    // res.send("Apprunning Succeessfully");
 });
 if (process.env.NODE_ENV == 'production') {
     const path = require('path');
     // const __dirname1 = path.resolve();
     app.get('/', (req, res) => {
+        res.send("Apprunning Succeessfully");
         app.use(express.static(__dirname, '../frontend', 'build'));
         res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
     })
