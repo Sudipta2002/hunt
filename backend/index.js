@@ -27,7 +27,7 @@ if (process.env.NODE_ENV == 'production') {
             message: 'Running Success'
         });
     })
-    app.get('/hi', (req, res) => {
+    app.get('/hi/', (req, res) => {
             res.status(200).json({
                 message: 'Running Successfully'
             });
