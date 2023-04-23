@@ -27,7 +27,7 @@ app.use('/api/v1/signIn', (req, res) => {
 });
 if (process.env.NODE_ENV == 'production') {
     const path = require('path');
-    const __dirname1 = path.resolve();
+    // const __dirname1 = path.resolve();
     app.get('/', (req, res) => {
         app.use(express.static(__dirname, '../frontend', 'build'));
         res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
