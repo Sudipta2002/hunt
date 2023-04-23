@@ -25,6 +25,12 @@ app.use('/api', apiRoutes);
 app.use('/api/v1/signIn', (req, res) => {
     return res.json({ message: "Hitting the signIn service" });
 });
+/**
+ *  
+ */
+app.get('/', (req, res) => {
+    res.send("Apprunning Succeessfully");
+});
 if (process.env.NODE_ENV == 'production') {
     const path = require('path');
     // const __dirname1 = path.resolve();
@@ -33,10 +39,9 @@ if (process.env.NODE_ENV == 'production') {
         res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
     })
 }
+
 app.listen(PORT, async() => {
-    // const path = require('path');
-    // const __dirname1 = path.resolve();
-    // console.log((path.join(__dirname1, '../frontend')));
+
     console.log("Server listening on port " + PORT);
     await connect();
     console.log("Database connected");
