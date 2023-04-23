@@ -22,10 +22,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
 passportAuth(passport);
 app.use('/api', apiRoutes);
-app.use('/api/v1/signIn', (req, res) => {
-    return res.json({ message: "Hitting the signIn service" });
-});
-
 
 if (process.env.NODE_ENV == 'production') {
     // const path = require('path');
