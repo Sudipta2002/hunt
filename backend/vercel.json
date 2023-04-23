@@ -6,5 +6,11 @@
     "routes": [{
         "src": "/.*",
         "dest": "/index.js"
-    }]
+    }],
+    "functions": {
+        "api/**/*.js": {
+            "memory": 512,
+            "timeout": 30
+        }
+    }
 }
