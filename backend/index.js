@@ -27,12 +27,7 @@ if (process.env.NODE_ENV == 'production') {
             message: 'Running Success'
         });
     })
-    app.get('/api/hi/', (req, res) => {
-            res.status(200).json({
-                message: 'Running Successfully'
-            });
-        })
-        // app.use('/api', apiRoutes);
+
 
 }
 
